@@ -1,0 +1,12 @@
+[submodule "mushr_coordination"]
+	path = mushr_coordination
+	url = https://github.com/prl-mushr/mushr_coordination
+	branch = clcbs_integration
+[submodule "mushr_pixelart_mpc"]
+	path = mushr_pixelart_mpc
+	url = https://github.com/prl-mushr/mushr_pixelart_mpc
+	branch = devel
+[submodule "clcbs_ros"]
+	path = clcbs_ros
+	url = https://github.com/prl-mushr/clcbs_ros
+	branch = devel
