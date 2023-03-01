@@ -10,3 +10,6 @@
 	path = clcbs_ros
 	url = https://github.com/prl-mushr/clcbs_ros
 	branch = devel
+[submodule "limit_surface"]
+	path = limit_surface
+	url = https://github.com/schmittlema/limit_surface
