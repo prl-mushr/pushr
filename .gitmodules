@@ -13,3 +13,4 @@
 [submodule "limit_surface"]
 	path = limit_surface
 	url = https://github.com/schmittlema/limit_surface
+	branch = main
