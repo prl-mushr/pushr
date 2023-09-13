@@ -87,7 +87,7 @@ Benchmarks 1-6 and 8-9 in the `mushr_pixelart_mpc/benchmarks` folder were used i
 
 ## Running the system in the real world
 
-Ensure you have an accurate and reliable pose tracking system for all robots (we used Optitrack motion capture) that can publish poses over ROS.
+Ensure you have an accurate and reliable pose tracking system for all robots (we used Optitrack motion capture) that can publish poses over ROS. The system expects poses to published to topics named in the format `/{car name}{car pose topic}`, e.g. for a topic `/car30/car_pose`, `car name` would be `car30` and `car pose topic` would be `/car_pose`.
 
 Launch terminals 1, 2, and 3 as above.
 
