@@ -47,7 +47,7 @@ Now, in every new terminal you open, run the following to source the workspace:
 source ~/pushr_ws/devel/setup.bash
 ```
 
-Alternatively, clone this repo to a location of your choice, copy each submodule into your catkin workspace, then follow installation instructions for each of the submodules. Installing limit_surface is not required to run the system.
+Alternatively, clone this repo to a location of your choice, copy each submodule into your catkin workspace, then follow installation instructions for each of the submodules.
 
 ## Running the system in sim
 
