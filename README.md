@@ -1,5 +1,7 @@
 # PuSHR: A Multirobot System for Nonprehensile Rearrangement
 
+![](https://github.com/prl-mushr/pushr/blob/master/mushr.gif)
+
 ## Organization
 
 This repository contains four main submodules, each corresponding to a different component of the system.
@@ -22,7 +24,7 @@ mushr_pixelart_mpc contains the code for MPC control of each robot, for both sim
 
 ## Installation
 
-Installation has been tested on Ubuntu 18.04. For simulation-only testing and reproducing experiments, we recommend that you use the virtual machine provided for the MuSHR platform. This work is known to have compilation issues on Ubuntu 20.04 (ROS Noetic) due to OMPL compatibility issues.
+The installation has been tested on Ubuntu 18.04. For simulation-only testing and reproducing experiments, we recommend that you use the virtual machine provided for the MuSHR platform. This work is known to have compilation issues on Ubuntu 20.04 (ROS Noetic) due to OMPL compatibility issues.
 
 Install the [MuSHR platform](https://mushr.io/tutorials/quickstart/) (this tutorial also specifies where to get the VM image).
 
@@ -55,7 +57,7 @@ To increase the limits for the simulated experiments, change the servo limits in
   servo_max: 1.0
 ```
 
-Now, in every new terminal you open, run the following to source the workspace:
+Now, in every new terminal you open, run the following to source the workspace (only necessary if not using the VM):
 
 ```bash
 source ~/pushr_ws/devel/setup.bash
