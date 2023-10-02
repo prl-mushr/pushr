@@ -22,9 +22,26 @@ mushr_pixelart_mpc contains the code for MPC control of each robot, for both sim
 
 ## Installation
 
-Installation has been tested on Ubuntu 18.04.
+Installation has been tested on Ubuntu 18.04. For simulation-only testing and reproducing experiments, we recommend that you use the virtual machine provided for the MuSHR platform. This work is known to have compilation issues on ubuntu 20.04 (ros noetic) due to OMPL compatibility issues.
 
-Install the [MuSHR platform](https://mushr.io/tutorials/quickstart/).
+Install the [MuSHR platform](https://mushr.io/tutorials/quickstart/) (this tutorial also specifies where to get the VM image).
+
+## Modifications to the MuSHR stack:
+The default steering angle limits in the MuSHR stack are lower than what we use in our work. 
+
+To increase the limits for the real car, change the servo limits in `~/pushr_ws/src/mushr/mushr_base/vesc/vesc_main/config/racecar-uw-nano/vesc.yaml` to 0.0 and 1.0:
+```yaml
+  servo_min: 0.0
+  servo_max: 1.0
+```
+
+To increase the limits for the simulated experiments, change the servo limits in `~/pushr_ws/src/mushr_sim/config/vesc.yaml` to 0.0 and 1.0:
+```yaml
+  servo_min: 0.0
+  servo_max: 1.0
+```
+
+Also, note that if you are using the MuSHR's VM image, pushr_ws need not be created, as you can use the already existing catkin_ws. We only provide instructions which create a separate directory for completeness.
 
 Install various other prerequisites:
 
