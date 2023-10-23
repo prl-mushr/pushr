@@ -35,22 +35,22 @@ sudo apt install libompl-dev python-scipy python-networkx python-sklearn
 pip install future torch
 ```
 
-Clone this repo into a new catkin workspace. If you are using the MuSHR's VM image, `pushr_ws` need not be created, as you can use the already existing `catkin_ws`. We provide these instructions which create a separate directory for completeness.
+Clone this repo into a new catkin workspace. If you are using the MuSHR's VM image, `catkin_ws` need not be created, as you can use the already existing `catkin_ws`. We provide these instructions which create a separate directory for completeness.
 
 ```bash
-mkdir ~/pushr_ws && cd ~/pushr_ws
+mkdir ~/catkin_ws && cd ~/catkin_ws
 git clone --recurse-submodules https://github.com/prl-mushr/pushr.git src
 catkin_make
 ```
 
-The default steering angle limits in the MuSHR stack are lower than what we use in our work. To increase the limits for the real car, change the servo limits in `~/pushr_ws/src/mushr/mushr_base/vesc/vesc_main/config/racecar-uw-nano/vesc.yaml` to 0.0 and 1.0:
+The default steering angle limits in the MuSHR stack are lower than what we use in our work. To increase the limits for the real car, change the servo limits in `~/catkin_ws/src/mushr/mushr_base/vesc/vesc_main/config/racecar-uw-nano/vesc.yaml` to 0.0 and 1.0:
 
 ```yaml
   servo_min: 0.0
   servo_max: 1.0
 ```
 
-To increase the limits for the simulated experiments, change the servo limits in `~/pushr_ws/src/mushr_sim/config/vesc.yaml` to 0.0 and 1.0:
+To increase the limits for the simulated experiments, change the servo limits in `~/catkin_ws/src/mushr_sim/config/vesc.yaml` to 0.0 and 1.0:
 
 ```yaml
   servo_min: 0.0
@@ -60,7 +60,7 @@ To increase the limits for the simulated experiments, change the servo limits in
 Now, in every new terminal you open, run the following to source the workspace (only necessary if not using the VM):
 
 ```bash
-source ~/pushr_ws/devel/setup.bash
+source ~/catkin_ws/devel/setup.bash
 ```
 
 Alternatively, clone this repo to a location of your choice, copy each submodule into your catkin workspace, then follow installation instructions for each of the submodules.
